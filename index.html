@@ -1,16 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Book List</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyBookList</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <div>
-            <div id="logo"></div>
-            <div id="title"><h2>MY <section id="titlemiddle">BOOK</section> LIST</h2></div>
-        </div>
-    </nav>
-    
-</body
+  <div class="container">
+    <!-- Header / Logo -->
+    <header class="app-header">
+      <svg class="book-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12 4.5C9.5 3.1 6.2 2.8 3 3.5v16c3.2-.7 6.5-.4 9 1 2.5-1.4 5.8-1.7 9-1v-16c-3.2-.7-6.5-.4-9 1zm-1 13.8c-2.1-.9-4.5-1.1-6.5-.7V5.1c2-.4 4.4-.2 6.5.7v12.5zm8.5-.7c-2-.4-4.4-.2-6.5.7V5.8c2.1-.9 4.5-1.1 6.5-.7v12.5z"/>
+        <!-- Solid fill variant matching the icon style -->
+        <path d="M11.3 4.8C9.1 3.5 6.1 3.2 3 3.8v15.4c3.1-.6 6.1-.3 8.3 1V4.8zm1.4 0v15.4c2.2-1.3 5.2-1.6 8.3-1V3.8c-3.1-.6-6.1-.3-8.3 1z"/>
+      </svg>
+      <h1>My<span class="highlight">Book</span>List</h1>
+    </header>
+
+    <!-- Book Entry Form -->
+    <form id="book-form">
+      <div class="form-group">
+        <label for="bookName">Book Name</label>
+        <input type="text" id="bookName" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="author">Author</label>
+        <input type="text" id="author" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="isbn">ISBN#</label>
+        <input type="text" id="isbn" class="form-control">
+      </div>
+
+      <button type="submit" class="btn-submit">Submit</button>
+    </form>
+
+    <!-- Book List Table -->
+    <table class="book-table">
+      <thead>
+        <tr>
+          <th>Book Name</th>
+          <th>Author</th>
+          <th>ISBN</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="book-list">
+        <tr>
+          <td>Book Two</td>
+          <td>Jane Doe</td>
+          <td>45545454</td>
+          <td class="action-cell">
+            <button type="button" class="btn-delete" aria-label="Delete book">X</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

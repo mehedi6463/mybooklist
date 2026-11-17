@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #222;
+  background-color: #fff;
+  line-height: 1.5;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Header & Title */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.book-icon {
+  width: 3.1rem;
+  height: 3.1rem;
+  color: #0077a8;
+}
+
+.app-header h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  color: #111;
+}
+
+.app-header .highlight {
+  color: #0077a8;
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 1.1rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.95rem;
+  color: #222;
+  margin-bottom: 0.4rem;
+}
+
+.form-control {
+  width: 100%;
+  height: 38px;
+  padding: 0.45rem 0.75rem;
+  font-size: 1rem;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 2px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #0077a8;
+  box-shadow: 0 0 0 2px rgba(0, 119, 168, 0.2);
+}
+
+.btn-submit {
+  display: block;
+  width: 100%;
+  padding: 0.6rem 1rem;
+  margin-top: 1.25rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #0077a8;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.btn-submit:hover {
+  background-color: #005f87;
+}
+
+/* Table Styling */
+.book-table {
+  width: 100%;
+  margin-top: 2.75rem;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.book-table thead tr {
+  border-top: 1px solid #dee2e6;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.book-table th {
+  padding: 0.75rem 0.85rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.book-table tbody tr {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.book-table tbody tr:nth-of-type(odd) {
+  background-color: #f2f2f2;
+}
+
+.book-table td {
+  padding: 0.75rem 0.85rem;
+  color: #222;
+  vertical-align: middle;
+}
+
+.action-cell {
+  text-align: center;
+  width: 70px;
+}
+
+.btn-delete {
+  background-color: #e0311d;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  width: 24px;
+  height: 26px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.btn-delete:hover {
+  background-color: #c22615;
+}
