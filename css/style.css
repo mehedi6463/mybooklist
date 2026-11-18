@@ -6,15 +6,17 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  color: #222;
-  background-color: #fff;
+  color: #da1919;
+  background-color: #dedee38d;
   line-height: 1.5;
   padding: 2rem 1rem;
 }
 
 .container {
-  max-width: 720px;
-  margin: 0 auto;
+  width: 70%;
+  margin: 10px auto;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Header & Title */
