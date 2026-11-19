@@ -37,6 +37,12 @@ class UI{
 
         list.appendChild(row);
     }
+
+    static clearFields(){
+        document.querySelector("#bookName").value='';
+        document.querySelector("#author").value='';
+        document.querySelector("#isbn").value='';
+    }
 }
 
 //store class: handle data store
@@ -44,9 +50,22 @@ class UI{
 //event: display book
 document.addEventListener('DOMContentLoaded', UI.displayBook);
 
-//add book by input field
-document.querySelector("book-form").addEventListener('submit', (e)=>{
-    const name =document.querySelector("#bookName");
-    const author =document.querySelector("#author");
-    const isbn =document.querySelector("#isbn");
-})
+//event: add book
+document.querySelector("#book-form").addEventListener('submit', (e)=>{
+    //prevent actual submit
+    e.preventDefault();
+
+    //get input field value
+    const name =document.querySelector("#bookName").value;
+    const author =document.querySelector("#author").value;
+    const isbn =document.querySelector("#isbn").value;
+
+    //get values from instance
+    const book = new Book(name, author, isbn);
+    
+    //add book in UI
+    UI.createBookList(book);
+
+    //clear fields
+    UI.clearFields();
+});

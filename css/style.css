@@ -126,6 +126,14 @@ body {
   color: #222;
   vertical-align: middle;
 }
+#book-list tr td a{
+  text-decoration: none;
+}
+#book-list tr td a:hover{
+  text-decoration: none;
+  color: #ced4da;
+}
+
 
 .action-cell {
   text-align: center;
@@ -133,7 +141,7 @@ body {
 }
 
 .btn-delete {
-  background-color: #e0311d;
+  background-color: #811105;
   color: #fff;
   border: none;
   border-radius: 2px;
@@ -150,5 +158,6 @@ body {
 }
 
 .btn-delete:hover {
-  background-color: #c22615;
+  background-color: #f11d06;
 }
+
