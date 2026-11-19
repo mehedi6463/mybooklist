@@ -37,6 +37,13 @@ class UI{
 
         list.appendChild(row);
     }
+    static deleteBook(el){
+        if (el.calssList.contains('btn-delete')) {
+            el.parentElement.parentElement.remove();
+            
+        }
+        
+    }
 
     static clearFields(){
         document.querySelector("#bookName").value='';
@@ -68,4 +75,9 @@ document.querySelector("#book-form").addEventListener('submit', (e)=>{
 
     //clear fields
     UI.clearFields();
+});
+
+//event: remove data
+document.querySelector('#book-list').addEventListener('click', (e)=>{
+    UI.deleteBook(e.target);
 });
