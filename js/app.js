@@ -38,7 +38,7 @@ class UI{
         list.appendChild(row);
     }
     static deleteBook(el){
-        if (el.calssList.contains('btn-delete')) {
+        if (el.classList.contains('btn-delete')) {
             el.parentElement.parentElement.remove();
             
         }
@@ -50,6 +50,8 @@ class UI{
         document.querySelector("#author").value='';
         document.querySelector("#isbn").value='';
     }
+
+    
 }
 
 //store class: handle data store
@@ -67,6 +69,13 @@ document.querySelector("#book-form").addEventListener('submit', (e)=>{
     const author =document.querySelector("#author").value;
     const isbn =document.querySelector("#isbn").value;
 
+    //input field validation
+    const validation = document.querySelector('#validation');
+    if(name.trim() === '' || author.trim() === '' || isbn.trim() === ''){
+        validation.textContent = 'Please fill in all fields.';
+        return;
+    }
+    validation.textContent = '';
     //get values from instance
     const book = new Book(name, author, isbn);
     
