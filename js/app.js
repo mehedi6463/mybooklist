@@ -45,6 +45,17 @@ class UI{
         
     }
 
+    static showAlert(message, className){
+        const div = document.createElement('div');
+        div.className=`alert alert-${className}`;
+        div.appendChild(document.createTextNode(message));
+        const container =document.querySelector('.container');
+        const form =document.querySelector('#book-form');
+        container.insertBefore(div, form);
+
+        setTimeout(() => div.remove(), 3000);
+    }
+
     static clearFields(){
         document.querySelector("#bookName").value='';
         document.querySelector("#author").value='';
@@ -70,12 +81,15 @@ document.querySelector("#book-form").addEventListener('submit', (e)=>{
     const isbn =document.querySelector("#isbn").value;
 
     //input field validation
-    const validation = document.querySelector('#validation');
+    // const validation = document.querySelector('#validation');
     if(name.trim() === '' || author.trim() === '' || isbn.trim() === ''){
-        validation.textContent = 'Please fill in all fields.';
-        return;
-    }
-    validation.textContent = '';
+        UI.showAlert('fillup the field', 'danger');
+
+        // validation.textContent = 'Please fill in all fields.';
+        // return;
+        // alert('Please fill in all fields.');
+    }else{
+        // validation.textContent = '';
     //get values from instance
     const book = new Book(name, author, isbn);
     
@@ -84,6 +98,8 @@ document.querySelector("#book-form").addEventListener('submit', (e)=>{
 
     //clear fields
     UI.clearFields();
+    }
+    
 });
 
 //event: remove data
